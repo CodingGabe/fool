@@ -1,0 +1,29 @@
+/* 
+I set root font size for scaling 
+*/
+// Main
+
+html {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: $bg-color;
+}

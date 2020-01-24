@@ -3,23 +3,32 @@
 <html>
 
 <head>
-  <title>Hello</title>
-  <link rel="stylesheet" href="/static/styles.css">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta content-type="text/html" charset="utf-8" />
+  <meta content="width=device-width initial-scale=1.0" name="viewport" />
+    {% if title %}
+      <title>News Hub - {{ title }}</title>
+    {% else %}
+      <title>News Hub - Fool</title>
+    {% endif %}
+  <link href="/static/styles.css" rel="stylesheet">
+  <!-- Font Stack from Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Header -->
   <header>
-    <div>
+    <div class="container px-6">
       <a href="http://www.fool.com" class="link-white no-hover" aria-label="home page">
         <img alt="Motley Fool Logo" src="https://g.foolcdn.com/art/fool15/bg/fool-logo.png">
       </a>
     </div>
   </header>
 
-  <!--Page Content -->
-  <section>
-    <div>
-
+  <!-- Page Content -->
+  <section class="fool_content">
+    <div class="container">
       <!-- Logo -->
       <h1>Stock Market News</h1>
       <p>
@@ -27,12 +36,7 @@
       </p>
       <section>
         <h2>Latest Headlines</h2>
-        <div>
-          <p>
-            Pull in latest articles here
-          </p>
-        </div>
-
+        <div id="fool_headlines"></div>
         <!-- Join SA CTA -->
         {% include "partials/join_sa.html" %}
       </section>

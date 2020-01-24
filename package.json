@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "compile": "sass --watch static/scss/base.scss static/styles.css"
+  },
+  "dependencies": {
+    "sass": "^1.25.0"
+  }
+}
